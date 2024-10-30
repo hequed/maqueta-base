@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest&display=swap');
+
+:root {
+    --text-color: #fff;
+    --text-enfasis: #FFD369;
+    --bg-dark-color: #222831;
+    --bg-grey-color: #393E46;
+    --bg-light-color: #EEEEEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Onest', sans-serif;
+}
+
+body {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+
+
+    color: var(--text-color);
+    background-color: var(--bg-dark-color);
+}
+
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        padding: 20px;
+        border: thin solid yellow;
+        background-color: var(--bg-dark-color);
+        text-align: center;
+
+        p {
+            color: var(--text-color);
+        }
+    }
+
+    .navbar {
+        border: thin solid red;
+        margin-top: 40px;
+        padding: 10px;
+        text-align: center;
+
+        a {
+            padding: 0px 20px 0px;
+            color: var(--text-enfasis);
+        }
+    }
+}
+
+.grilla { /* ! GRILLA CONFIG */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 40px;
+    gap: 8px;
+
+    .hero { /* todo HERO SECTION */
+        border: thin solid cyan;
+        grid-column: span 2 / span 2;
+    }
+    
+    .panel-1 { /* todo PANEL-1 SECTION */
+        border: thin solid cyan;
+        grid-row-start: 2;
+    }
+    
+    .panel-2 { /* todo PANEL-2 SECTION */
+        border: thin solid cyan;
+        grid-row-start: 2;
+    }
+}
+
+.about-us {
+    border: thin solid magenta;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+footer {
+    border: thin solid palegreen;
+    margin-top: 40px;
+}
