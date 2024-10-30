@@ -20,9 +20,9 @@
 }
 
 body {
-    display: grid;
-    min-height: 100dvh;
-    grid-template-rows: auto 1fr auto;
+    display: grid; /* todo GRID-CONFIG para mantener siempre el FOOTER al final de la pagina. */
+    min-height: 100dvh; /* todo GRID-CONFIG para mantener siempre el FOOTER al final de la pagina. */
+    grid-template-rows: auto 1fr auto; /* todo GRID-CONFIG para mantener siempre el FOOTER al final de la pagina. */
 
 
     color: var(--text-color);
@@ -75,11 +75,68 @@ header {
     .hero { /* todo HERO SECTION */
         border: thin solid cyan;
         grid-column: span 2 / span 2;
+
+        .textos-config {
+            margin-top: 10px;
+            padding: 20px;
+
+            img {
+                width: 460px;
+                height: 500px;
+            }
+
+            h2 {
+                color: var(--text-color);
+                font-size: 2.2rem;
+                font-weight: 600;
+                padding: 40px 0px 0px 40px;
+                text-align: left;
+            }
+
+            p {
+                color: var(--text-enfasis);
+                margin-top: 5px;
+                padding: 0px 0px 60px 40px;
+                font-size: 1.2rem;
+                line-height: 1.4; /* se usa para establecer la distancia entre líneas de texto. */
+                text-align: left;
+                width: 1000px;
+            }
+        }
     }
     
     .panel-1 { /* todo PANEL-1 SECTION */
         border: thin solid cyan;
         grid-row-start: 2;
+
+        .textos-config {
+                margin-top: 10px;
+                padding: 20px;
+        
+                img {
+                    width: 460px;
+                    height: 500px;
+                }
+        
+                h2 {
+                    color: var(--text-color);
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    padding: 40px 0px 0px 40px;
+                    text-align: left;
+                }
+        
+                p {
+                    color: var(--text-enfasis);
+                    margin-top: 5px;
+                    padding: 0px 0px 60px 40px;
+                    font-size: 1.2rem;
+                    line-height: 1.4;
+                    /* se usa para establecer la distancia entre líneas de texto. */
+                    text-align: left;
+                    width: 1000px;
+                }
+            }  
     }
     
     .panel-2 { /* todo PANEL-2 SECTION */
