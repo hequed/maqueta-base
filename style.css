@@ -2,7 +2,7 @@
 
 :root {
     --text-color: #F5F3F4;
-    --text-enfasis: #E5383B;
+    --text-enfasis: #ff0000;
     --bg-dark-color: #0B090A;
     --bg-grey-color: #161A1D;
     --bg-light-color: #B1A7A6;
@@ -29,7 +29,7 @@ body {
 
 
     color: var(--text-color);
-    background-color: var(--bg-dark-color);
+    background-color: var(--bg-light-color);
 }
 
 header {
@@ -41,9 +41,10 @@ header {
         flex-direction: column;
         align-items: center;
         align-content: center;
+        background-color: var(--bg-grey-color);
 
         padding: 20px;
-        border: thin solid yellow;
+        /* border: thin solid yellow; */
         text-align: center;
 
         p {
@@ -83,9 +84,10 @@ header {
     }
 
     .navbar {
-        border: thin solid red;
+        background-color: black;
+        /* border: thin solid red; */
         margin-top: 40px;
-        padding: 10px;
+        padding: 18px;
         text-align: center;
         margin: 0px 0px 0px 0px;
 
@@ -102,181 +104,109 @@ header {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-}
 
-.grilla {
-    display: grid;
-    grid:
-        "hero hero" 1fr "panel-registro panel-filosofia" 1fr / 1fr 1fr;
-}
+    background-image: url(/media/bg-container.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--bg-dark-color);
+    background-blend-mode: luminosity;
 
-.hero {
-    grid-area: hero;
-}
-
-.panel-registro {
-    grid-area: panel-registro;
-}
-
-.panel-filosofia {
-    grid-area: panel-filosofia;
-
-    width: 100%;
-    margin-top: 40px;
-    gap: 8px;
+    .grilla {
+        /* border: thin solid yellow; */
+        display: grid;
+        padding: 90px;
+        gap: 50px;
+        grid:
+            "hero hero" 1fr "panel-registro panel-filosofia" 1fr / 1fr 1fr;
+    }
 
     .hero {
-        /* todo HERO SECTION */
-        border: thin solid cyan;
-        background-color: var(--bg-grey-color);
         grid-area: hero;
+        border: thin solid yellow;
+        padding: 40px;
+        border-radius: 20px;
 
-        .textos-config {
+        background: rgba(248, 5, 5, 0.253);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+
+        background-image: url(./media/az-logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+
+        display: flex;
+        flex-direction: column;
+
+        .gossip {
+            margin-top: 20px;
+            margin-bottom: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-top: 10px;
-            padding: 20px;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            gap: 14px;
 
-            img {
-                margin: 0px 0px 0px 60px;
+            a {
+                color: #00ff62;
+                background-color: #0b090a98;
+                border: 1px solid #00ff620c;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 12px;
             }
+        }
 
-            h2 {
-                color: var(--text-color);
-                font-size: 1.2rem;
-                font-weight: 600;
-                padding: 40px 0px 0px 40px;
-                text-align: left;
-            }
-
-            p {
-                color: var(--text-enfasis);
-                margin-top: 5px;
-                padding: 0px 0px 60px 40px;
-                font-size: 1.2rem;
-                line-height: 1.4;
-                /* se usa para establecer la distancia entre líneas de texto. */
-                text-align: left;
-                width: 1000px;
-            }
-
-            .realmlist {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                align-content: center;
-
-                margin-top: 12px;
-                padding: 20px 0px 20px;
-                margin: 10px 6px 60px 40px;
-                font-size: 1.2rem;
-                text-align: left;
-                /* se usa para establecer la distancia entre líneas de texto. */
-                width: 420px;
-                height: 40px;
-
-                background-image: url(./media/bucle.webp);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-blend-mode: lighten;
-                background-color: rgba(255, 0, 0, 0.185);
-
-                border-radius: 10px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(0px);
-                -webkit-backdrop-filter: blur(0px);
-                border: 1px solid #91919133;
-
-                a {
-                    padding: 10px;
-                    color: var(--text-color);
-                }
-            }
+        p {
+            width: 930px;
         }
     }
 
     .panel-registro {
-        /* todo PANEL-FILOSOFIA SECTION */
-        border: thin solid cyan;
         grid-area: panel-registro;
+        border: thin solid yellow;
+        padding: 40px;
+        border-radius: 20px;
 
-        .textos-config {
-            margin-top: 10px;
-            padding: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
 
-            img {
-                width: 460px;
-                height: 500px;
-            }
-
-            h2 {
-                color: var(--text-color);
-                font-size: 2.2rem;
-                font-weight: 600;
-                padding: 40px 0px 0px 40px;
-                text-align: left;
-            }
-
-            p {
-                color: var(--text-enfasis);
-                margin-top: 5px;
-                padding: 0px 0px 60px 40px;
-                font-size: 1.2rem;
-                line-height: 1.4;
-                /* se usa para establecer la distancia entre líneas de texto. */
-                text-align: left;
-                width: 1000px;
-            }
-        }
+        img {}
     }
 
     .panel-filosofia {
-        /* todo PANEL-REGRISTRO SECTION */
-        border: thin solid cyan;
         grid-area: panel-filosofia;
+        border: thin solid yellow;
+        padding: 40px;
+        border-radius: 20px;
 
-        .textos-config {
-            margin-top: 10px;
-            padding: 20px;
-
-            img {
-                width: 460px;
-                height: 500px;
-            }
-
-            h2 {
-                color: var(--text-color);
-                font-size: 2.2rem;
-                font-weight: 600;
-                padding: 40px 0px 0px 40px;
-                text-align: left;
-            }
-
-            p {
-                color: var(--text-enfasis);
-                margin-top: 5px;
-                padding: 0px 0px 60px 40px;
-                font-size: 1.2rem;
-                line-height: 1.4;
-                /* se usa para establecer la distancia entre líneas de texto. */
-                text-align: left;
-                width: 1000px;
-            }
-        }
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
 }
 
 .about-us {
-    border: thin solid magenta;
+    background-color: var(--bg-dark-color);
+    /* border: thin solid magenta; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
 }
 
 footer {
-    border: thin solid palegreen;
-    margin-top: 40px;
+    background-color: var(--bg-grey-color);
+    /* border: thin solid palegreen; */
 }
